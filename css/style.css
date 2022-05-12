@@ -3,23 +3,22 @@
 
 :root {
     --color-primary: #068FF2;
+    --color-secondary: #ffffff;
 }
 
 html {
-   scroll-behavior: smooth;
-
+    scroll-behavior: smooth;
     box-sizing: border-box;
     font-size: 62.5%;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
-
 }
 
 body {
     font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fuente de la pagina */
 }
 
 .header {
@@ -27,7 +26,6 @@ body {
     display: flex;
     align-items: center;
     padding: 0 0.7rem;
-    /* justify-content: space-between; */
 }
 
 .button-menu {
@@ -37,7 +35,7 @@ body {
     border: none; 
     background: none; 
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -50,7 +48,7 @@ body {
     background: var(--color-primary);
     border-radius: 3px;
     transform-origin: 3px 0px;
-    transition: all .2s linear;
+    transition: all 0.2s linear;
 }
 
 .button-menu.close span {
@@ -126,6 +124,10 @@ body {
     margin: 4rem auto 0; /* Para que se centre */
 }
 
+.copy-text{
+    text-align: center;
+}
+
 .search-container input{
     width: 100%;
     padding: 1rem;
@@ -163,7 +165,7 @@ figure, h2, p{
 
 .img-product{
     width: 100%;
-    border-radius: 60%; 
+    border-radius:50%; 
 }
 
 .product-title{
@@ -252,7 +254,7 @@ figure, h2, p{
     .header-logo {
         width: 90%;
     }
-    
+
     .img-logo {
         width: 12rem;
     }
