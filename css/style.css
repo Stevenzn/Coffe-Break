@@ -1,0 +1,367 @@
+/* Importando Fuente desde Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-primary: #068FF2;
+}
+
+html {
+   scroll-behavior: smooth;
+
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    height: 10vh; /* 100px-Altura */
+    display: flex;
+    align-items: center;
+    padding: 0 0.7rem;
+    /* justify-content: space-between; */
+}
+
+.button-menu {
+    z-index: 200; /* Para que se vea encima de los demas elementos */
+    width: 4rem; 
+    height: 4rem;
+    border: none; 
+    background: none; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button-menu span {
+    width: 3rem;
+    height: 0.3rem;
+    margin-bottom: 5px;
+    background: var(--color-primary);
+    border-radius: 3px;
+    transform-origin: 3px 0px;
+    transition: all .2s linear;
+}
+
+.button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px); /* Gira para formar la x */
+    background: var(--color-primary);
+}
+
+.button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px); /* Gira para formar la x */
+}
+
+.button-menu.close span:nth-child(3) {
+    opacity: 0; /* Oculta el ultimo span */
+}
+
+.header-logo {
+    width: 85%;
+    text-align: center;
+}
+
+.img-logo {
+    width: 7rem;
+}
+
+.nav {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%; /* Para que se oculte */
+    transition: all 0.2s linear;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 100; 
+}
+
+.nav.show {
+    margin-left: 0; /* Para que se muestre desde el codigo js */
+}
+
+.nav-links {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 75%;
+    height: 100%;
+}
+
+.link{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 1.5rem;
+    transition: all 0.1s linear;
+}
+
+.link:hover{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.uno{
+    margin-top: 5rem; /* No quede pegado a la X */
+}
+
+.search-container{
+    width: 85%;
+    margin: 4rem auto 0; /* Para que se centre */
+}
+
+.search-container input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-color: var(--color-primary);
+    border-style: solid;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.search-container input:focus{
+    outline: none; /* Para que no se vea el borde */
+}
+
+.products-container{
+    width: 85%;
+    margin: 4rem auto 0;    /* Para que se centre */
+    display: flex;
+    flex-wrap: wrap; /* Para que se puedan colocar en filas y si se acaba el espacio baje */
+}
+
+figure, h2, p{
+    margin: 0; 
+}
+
+.product-card{
+    width: 50%;
+    padding: 0.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.img-container{
+    width: 100%; /* Para que se ajuste a la imagen */
+}
+
+.img-product{
+    width: 100%;
+    border-radius: 60%; 
+}
+
+.product-title{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+    font-style: italic;
+}
+
+.product-description{
+    font-size: 1.3rem;
+    text-align: justify;
+    margin: 0 0 0.5rem 0;
+}
+
+.product-price{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.product-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.footer{
+    width: 100%;
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer-logo{
+    width: 20%;
+}
+
+.footer-logo img{
+    width: 100%;
+}
+
+.footer-menu-item, .footer-social-item{
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.1s linear;
+    cursor: pointer;
+}
+
+.footer-menu-list, .footer-social-list{
+    list-style: none;
+}
+
+.footer-menu-link, .footer-social-link{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-social-item:hover{
+    background-color: #000000;
+}
+
+.footer-menu-item:hover{
+    background-color: #000000;
+}
+
+
+/* Diseño dispositivos Tablets */
+@media screen and (min-width: 600px) {
+    .header-logo {
+        width: 90%;
+    }
+    
+    .img-logo {
+        width: 12rem;
+    }
+
+    .nav-links {
+        width:60%;
+    }
+
+    .search-container{
+        width: 80%;
+    }
+    
+    .products-container{
+        width: 90%;
+        justify-content: center;
+    }
+    
+    .product-card{
+        width: 33%;
+        padding: 1rem;
+    }
+    
+    .product-title{
+        font-size: 2rem;
+    }
+    
+    .footer-content{
+        justify-content: space-around;
+    }
+    
+    .footer-logo{
+        width: 15%;
+    }
+
+    .footer-social-item{
+        font-size: 3rem;
+    }
+
+    .footer-menu-item{
+        font-size: 2.2rem;
+    }
+}
+
+/* Diseño Computadoras Portatiles */
+@media screen and (min-width: 768px) {
+
+    .nav-links {
+        width:50%;
+    }
+
+   
+    .products-container{
+        width: 90%;
+    }
+    
+    .product-card{
+        width: 25%;
+        padding: 2rem;
+    }
+    
+    .product-title{
+        font-size: 2rem;
+    }
+    
+    .footer-content{
+        justify-content: space-around;
+    }
+    
+    .footer-logo{
+        width: 12%;
+    }
+
+    .footer-social-item{
+        font-size: 2.5rem;
+    }
+
+    .footer-menu-item{
+        font-size: 2rem;
+    }
+}
+/* El resto */
+@media screen and (min-width: 998px) {
+
+
+    .nav-links {
+        width:45%;
+    }
+
+    .search-container{
+        width: 65%;
+    }
+    
+    .products-container{
+        width: 90%;
+    }
+    
+    .product-card{
+        width: 22%;
+    }
+    
+    .product-title{
+        font-size: 2rem;
+    }
+
+    .footer-social-item{
+        font-size: 2.3rem;
+    }
+
+    .footer-menu-item{
+        font-size: 1.7rem;
+    }
+}
