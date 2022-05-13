@@ -430,6 +430,10 @@ figure, h2, p {
 /* Diseño dispositivos Tablets */
 @media screen and (min-width: 600px) {
 
+    .admin-container{
+        flex-direction: row;
+    }
+
     .form-login{
         width: 40%;
     }
