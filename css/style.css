@@ -18,24 +18,27 @@ html {
 
 body {
     font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif; /* Fuente de la pagina */
+    font-family: 'Roboto', sans-serif;
+    /* Fuente de la pagina */
 }
 
 .header {
-    height: 10vh; /* 100px-Altura */
+    height: 10vh;
+    /* 100px-Altura */
     display: flex;
     align-items: center;
     padding: 0 0.7rem;
 }
 
 .button-menu {
-    z-index: 200; /* Para que se vea encima de los demas elementos */
-    width: 4rem; 
+    z-index: 200;
+    /* Para que se vea encima de los demas elementos */
+    width: 4rem;
     height: 4rem;
-    border: none; 
-    background: none; 
+    border: none;
+    background: none;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -53,16 +56,19 @@ body {
 
 .button-menu.close span {
     opacity: 1;
-    transform: rotate(45deg) translate(0px, 0px); /* Gira para formar la x */
+    transform: rotate(45deg) translate(0px, 0px);
+    /* Gira para formar la x */
     background: var(--color-primary);
 }
 
 .button-menu.close span:nth-child(2) {
-    transform: rotate(-45deg) translate(-8px, 5px); /* Gira para formar la x */
+    transform: rotate(-45deg) translate(-8px, 5px);
+    /* Gira para formar la x */
 }
 
 .button-menu.close span:nth-child(3) {
-    opacity: 0; /* Oculta el ultimo span */
+    opacity: 0;
+    /* Oculta el ultimo span */
 }
 
 .header-logo {
@@ -75,19 +81,21 @@ body {
 }
 
 .nav {
-    position: fixed; 
-    top: 0; 
+    position: fixed;
+    top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
-    margin-left: -100%; /* Para que se oculte */
+    margin-left: -100%;
+    /* Para que se oculte */
     transition: all 0.2s linear;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 100; 
+    z-index: 100;
 }
 
 .nav.show {
-    margin-left: 0; /* Para que se muestre desde el codigo js */
+    margin-left: 0;
+    /* Para que se muestre desde el codigo js */
 }
 
 .nav-links {
@@ -99,7 +107,7 @@ body {
     height: 100%;
 }
 
-.link{
+.link {
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -110,25 +118,28 @@ body {
     transition: all 0.1s linear;
 }
 
-.link:hover{
+.link:hover {
     background-color: var(--color-primary);
     color: #fff;
 }
 
-.uno{
-    margin-top: 5rem; /* No quede pegado a la X */
+.uno {
+    margin-top: 5rem;
+    /* No quede pegado a la X */
 }
 
-.search-container{
+.search-container {
     width: 85%;
-    margin: 4rem auto 0; /* Para que se centre */
+    margin: 4rem auto 0;
+    /* Para que se centre */
 }
 
-.copy-text{
+.copy-text {
     text-align: center;
+
 }
 
-.search-container input{
+.search-container input {
     width: 100%;
     padding: 1rem;
     border-radius: 1rem;
@@ -138,37 +149,41 @@ body {
     font-size: 1.5rem;
 }
 
-.search-container input:focus{
-    outline: none; /* Para que no se vea el borde */
+.search-container input:focus {
+    outline: none;
+    /* Para que no se vea el borde */
 }
 
-.products-container{
+.products-container {
     width: 85%;
-    margin: 4rem auto 0;    /* Para que se centre */
+    margin: 4rem auto 0;
+    /* Para que se centre */
     display: flex;
-    flex-wrap: wrap; /* Para que se puedan colocar en filas y si se acaba el espacio baje */
+    flex-wrap: wrap;
+    /* Para que se puedan colocar en filas y si se acaba el espacio baje */
 }
 
-figure, h2, p{
-    margin: 0; 
+figure, h2, p {
+    margin: 0;
 }
 
-.product-card{
+.product-card {
     width: 50%;
     padding: 0.5rem;
     margin: 0 0 0.5rem 0;
 }
 
-.img-container{
-    width: 100%; /* Para que se ajuste a la imagen */
-}
-
-.img-product{
+.img-container {
     width: 100%;
-    border-radius:50%; 
+    /* Para que se ajuste a la imagen */
 }
 
-.product-title{
+.img-product {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.product-title {
     font-size: 1.7rem;
     font-weight: bold;
     color: var(--color-primary);
@@ -177,20 +192,20 @@ figure, h2, p{
     font-style: italic;
 }
 
-.product-description{
+.product-description {
     font-size: 1.3rem;
     text-align: justify;
     margin: 0 0 0.5rem 0;
 }
 
-.product-price{
+.product-price {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--color-primary);
     text-align: center;
 }
 
-.product-button{
+.product-button {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -199,60 +214,70 @@ figure, h2, p{
     background-color: var(--color-primary);
     color: #fff;
     padding: 0.8rem;
-    border: none;
     border-radius: 1rem;
+    cursor: pointer;
+    border-color: #068FF2;
 }
 
-.footer{
+.footer {
     width: 100%;
     background-color: var(--color-primary);
     color: #fff;
 }
 
-.footer-content{
+.footer-content {
+    height: auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
 }
 
-.footer-logo{
+.footer-logo {
+    height: auto;
     width: 20%;
 }
 
-.footer-logo img{
+.footer-logo img {
     width: 100%;
 }
 
-.footer-menu-item, .footer-social-item{
+.footer-menu-item, .footer-social-item {
     padding: 1rem;
     text-align: center;
     transition: all 0.1s linear;
     cursor: pointer;
 }
 
-.footer-menu-list, .footer-social-list{
+.footer-social, .footer-menu{
+    height: auto;
+}
+
+.footer-menu-list, .footer-social-list {
     list-style: none;
 }
 
-.footer-menu-link, .footer-social-link{
+.footer-menu-link, .footer-social-link {
     color: #fff;
     text-decoration: none;
 }
 
-.footer-social-item:hover{
+.footer-social-item:hover {
     background-color: #000000;
 }
 
-.footer-menu-item:hover{
+.footer-menu-item:hover {
     background-color: #000000;
 }
 
 
 /* Diseño dispositivos Tablets */
 @media screen and (min-width: 600px) {
+
     .header-logo {
-        width: 90%;
+        width: 85%;
+        margin-top: 1rem;
     }
 
     .img-logo {
@@ -260,40 +285,40 @@ figure, h2, p{
     }
 
     .nav-links {
-        width:60%;
+        width: 60%;
     }
 
-    .search-container{
+    .search-container {
         width: 80%;
     }
-    
-    .products-container{
+
+    .products-container {
         width: 90%;
         justify-content: center;
     }
-    
-    .product-card{
+
+    .product-card {
         width: 33%;
         padding: 1rem;
     }
-    
-    .product-title{
+
+    .product-title {
         font-size: 2rem;
     }
-    
-    .footer-content{
+
+    .footer-content {
         justify-content: space-around;
     }
-    
-    .footer-logo{
+
+    .footer-logo {
         width: 15%;
     }
 
-    .footer-social-item{
+    .footer-social-item {
         font-size: 3rem;
     }
 
-    .footer-menu-item{
+    .footer-menu-item {
         font-size: 2.2rem;
     }
 }
@@ -301,69 +326,118 @@ figure, h2, p{
 /* Diseño Computadoras Portatiles */
 @media screen and (min-width: 768px) {
 
-    .nav-links {
-        width:50%;
+    .button-menu {
+        display: none;
     }
 
-   
-    .products-container{
-        width: 90%;
+    .header {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav {
+        position: static;
+        margin-left: 0;
+        height: 0;
+        width: 75%;
+        background-color: #fff;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
     }
     
-    .product-card{
+    .uno{
+        margin-top: 0;
+    }
+
+
+    .header-logo {
+        width: 20%;
+        margin-top: 1rem;
+    }
+    .nav-links {
+        width: 100%;
+    }
+
+
+    .products-container {
+        width: 90%;
+    }
+
+    .product-card {
         width: 25%;
         padding: 2rem;
     }
-    
-    .product-title{
+
+    .product-title {
         font-size: 2rem;
     }
-    
-    .footer-content{
+
+    .footer-content {
         justify-content: space-around;
     }
-    
-    .footer-logo{
+
+    .footer-logo {
         width: 12%;
     }
 
-    .footer-social-item{
+    .footer-social-item {
         font-size: 2.5rem;
     }
 
-    .footer-menu-item{
+    .footer-menu-item {
         font-size: 2rem;
     }
 }
+
 /* El resto */
 @media screen and (min-width: 998px) {
 
+    .nav {
+        position: static;
+        margin-left: 0;
+        height: 0;
+        width: 60%;
+        background-color: #fff;
+        margin-top: 1.5rem;
+    }
 
     .nav-links {
-        width:45%;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
     }
 
-    .search-container{
+    .link{
+        width: 100%;
+    }
+
+    .search-container {
         width: 65%;
     }
-    
-    .products-container{
+
+    .products-container {
         width: 90%;
     }
-    
-    .product-card{
+
+    .product-card {
         width: 22%;
     }
-    
-    .product-title{
+
+    .product-title {
         font-size: 2rem;
     }
 
-    .footer-social-item{
+    .footer-social-item {
         font-size: 2.3rem;
     }
 
-    .footer-menu-item{
+    .footer-menu-item {
         font-size: 1.7rem;
     }
 }

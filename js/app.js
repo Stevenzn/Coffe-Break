@@ -1,8 +1,9 @@
 /* Open and close menu hamburguer */
-
+const btnProduct = document.querySelector('product-buttons');
 const toggleButton = document.getElementById("button-menu");
 const navWrapper = document.getElementById("nav");
 
+  
 
 toggleButton.addEventListener("click", () => {
   toggleButton.classList.toggle("close");
